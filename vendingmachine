@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  string repor[2] = {"sim", "nao"};
+  string produtos[7] = {"doritos", "coca", "cheetos", "kitkat", "amendoim", "jujubas", "guarana"};
+  int lucros, s, quantidade[7], valor[7], unidade, i, reposi;
+   
+  // modo Administrador: 
+
+  cout << "\n--- Modo Administrativo ---\n";
+  cout << "Temos os seguintes produtos:\n \nDoritos\nCoca\nCheetos\nKit Kat\nAmendoim\nJuJubas\nGuaraná\n ";
+
+  cout << "\nQual produto deseja verificar se ainda há no stock da máquina?: ";
+  cin >> produtos[s];
+  
+  
+   if (produtos[s] == "doritos") {
+   quantidade[s] = 12;
+   cout << "\nEsse produto está disponível em " << quantidade[s] << " unidades ";
+  }
+   
+   if (produtos[s] == "coca") {
+   quantidade[s] = 10;
+   cout << "\nEsse produto está disponível em " << quantidade[s] << " unidades ";
+  }
+   
+   if (produtos[s] == "cheetos") {
+   quantidade[s] = 6;
+   cout << "\nEsse produto está disponível em " << quantidade[s] << " unidades ";
+  }
+   
+   if (produtos[s] == "kitkat") {
+   quantidade[s] = 3;
+   cout << "\nEsse produto está disponível em " << quantidade[s] << " unidades ";
+  }
+   
+   if (produtos[s] == "amendoim") {
+   quantidade[s] = 13;
+   cout << "\nEsse produto está disponível em " << quantidade[s] << " unidades ";
+  }
+  
+   if (produtos[s] == "jujubas") {
+   quantidade[s] = 12;
+   cout << "\nEsse produto está disponível em " << quantidade[s] << " unidades ";
+  }
+  
+  if (produtos[s] == "guarana") {
+   quantidade[s] = 4;
+   cout << "\nEsse produto está disponível em " << quantidade[s] << " unidades ";
+  }
+
+  if (quantidade[s] < 5) {
+    cout << "* Esse produto está quase em falta, reponha! * \n ";
+  }
+
+  cout <<  "\nDeseja repor esse produto? ";
+  cin >> repor[i];
+
+  if (repor[i] == "sim") {
+    cout << "\nQuantas unidades deseja repor? ";
+    cin >> unidade;
+
+    reposi = unidade + quantidade[i];
+   
+    cout << "Agora esse produto está disponível em " << reposi << " unidades " << endl;
+  }
+
+  if (repor[i] == "nao"){
+    cout << "Produto não reposto";
+    }
+}
